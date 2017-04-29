@@ -48,8 +48,8 @@
 % - Keep it simple, no one is interested in your street address.
 
 \date[BITSS2014] % (optional, should be abbreviation of conference name)
-{ICPSR, July 2016\\
-Slides available online at \url{https://github.com/BITSS/ICPSR2016}}
+{INSP, May 2017\\
+Slides available online at \url{https://github.com/BITSS/INSP2017}}
 % - Either use conference name or its abbreviation.
 % - Not really informative to the audience, more for people (including
 %   yourself) who are reading the slides online
@@ -138,14 +138,49 @@ including yourself next week''
 \end{frame}
 \begin{frame}{Workflow}
 
- \begin{itemize}
+ \begin{itemize}[<.->]
+ \item OSF
  \item Version Control
  \item Dynamic Documents
 \end{itemize}
 \end{frame}
 
+\begin{frame}
+Put your work all in one place with the Open Science Framework \href{http://osf.io}{\beamerbutton{Link}}
+\begin{itemize}[<.->]
+\item Pre-Registration
+\item Data
+	\begin{itemize}
+	\item Host
+	\item Link to Dataverse
+	\end{itemize}
+\item Version Control
+\item More to Come
+\end{itemize}
+\end{frame}
 
- { % all template changes are local to this group.
+{
+% all template changes are local to this group.
+    \setbeamertemplate{navigation symbols}{}
+    \begin{frame}[plain]
+         \begin{tikzpicture}[remember picture,overlay]
+            \node[at=(current page.center)] {
+                \includegraphics[width=\paperwidth]{../Images/OSFnow.PNG}
+            };
+        \end{tikzpicture}
+     \end{frame}
+
+% all template changes are local to this group.
+    \setbeamertemplate{navigation symbols}{}
+    \begin{frame}[plain]
+         \begin{tikzpicture}[remember picture,overlay]
+            \node[at=(current page.center)] {
+                \includegraphics[width=\paperwidth]{../Images/OSFsoon.PNG}
+            };
+        \end{tikzpicture}
+     \end{frame}
+
+ % all template changes are local to this group.
     \setbeamertemplate{navigation symbols}{}
     \begin{frame}[plain, label=AEAreg]
          \begin{tikzpicture}[remember picture,overlay]
@@ -189,9 +224,8 @@ Possible in Python, R, and to a lesser extent, Stata
             };
         \end{tikzpicture}
      \end{frame}
-}
 
-{ % all template changes are local to this group.
+ % all template changes are local to this group.
     \setbeamertemplate{navigation symbols}{}
     \begin{frame}[plain, label=AEAreg]
          \begin{tikzpicture}[remember picture,overlay]
@@ -202,12 +236,25 @@ Possible in Python, R, and to a lesser extent, Stata
      \end{frame}
 }
 
+\begin{frame}
+Try them online:
+\begin{itemize}[<.->]
+\item \href{https://try.jupyter.org/}{Jupyter}
+\item \href{https://datascience.stackexchange.com/questions/2269/any-online-r-console}{R}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{For the hardcore}
+\href{http://www.docker.com}{
+\includegraphics[scale=0.4]{../Images/docker.png}}
+\end{frame}
+
 \section{Conclusion}
 \begin{frame}{Conclusion}
 OK, I'm convinced. How do I learn more?
 
 \begin{itemize}[<.->]
-\item Work through my demos.\href{https://github.com/BITSS/SummerInstitute2016}{\beamergotobutton{Link}}
+\item Work through my demos.\href{https://github.com/BITSS/UCMerced2017}{\beamergotobutton{Link}}
 \item Software Carpentry's tutorials \href{http://www.software-carpentry.org/lessons}{\beamergotobutton{Link}}
 
 \end{itemize}
