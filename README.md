@@ -27,14 +27,14 @@ Workshop Agenda
 
 Time | Session |
 ------------ | ------------- |
-Day 1 | Wednesday, May 3 |
+**Day 1** | Wednesday, May 3 |
 9:00-9:30 | Welcome and introductions |
 9:30-10:45 |Overview of transparency and reproducibility in social science research |
 10:45-11:00 | COFFEE BREAK |
 11:00-12:00 | Registration & Pre-Analsysis Plans (AEA Registry, OSF) |
 12:00-1:00pm | LUNCH BREAK |
 1:00-2:00 | Reproducible Coding Stategies |
-Day 2 | Wednesday, May 4 |
+**Day 2** | Thursday, May 4 |
 9:00-10:45 | Dynamic Documents (Stata, R)
 10:45-11:00 | COFFEE BREAK |
 11:00-12:00 | Version Control with Git/Github Part 1|
