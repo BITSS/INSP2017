@@ -79,13 +79,13 @@ As we've done throughout this workshop, let's create a project (a
 reasonably self-contained set of code, data, and results to answer a
 discrete scientific question) that will analyze the number of birds
 counted during a field survey. We begin by creating a directory called
-`raptor_inflam` in a convenient place on our hard drive (if you've
+`military` in a convenient place on our hard drive (if you've
 completed the [version control lesson]({{page.root}}/lessons/git/),
 note that we're starting a new project directory here, which will be
 organized and managed more comprehensively than the example in that
 lesson).
 
-Now, within the `raptor_inflam` directory, create four subdirectories (for bonus points, do this from the command line):
+Now, within the `military` directory, create four subdirectories (for bonus points, do this from the command line):
 
     .
     |-- data
@@ -133,7 +133,7 @@ Git tutorial.
 ----------------
 
 Often, we start a project with a particular data file, or set of data
-files. 
+files.
 
 Now we reach an interesting question --- should the files in your
 `data` directory be placed under version control (i.e., should you
@@ -166,7 +166,7 @@ complex. Ecologists, for example, have a standard known as
 standards and a tool
 [Morpho](http://knb.ecoinformatics.org/morphoportal.jsp) for creating
 metadata files. For your own private work, make sure that, at a
-minimum, you create a `README.txt` file that describes your data as
+minimum, you create a `README.txt` (or `README.md` to facilitate the web) file that describes your data as
 best you can.
 
 Copy and paste the text below into a `README.txt` file and place it in
@@ -184,9 +184,9 @@ At this point, your project directory should look like this:
     |-- data
     |   |-- inflammation-01.csv
     |   |-- README.txt
-    |-- man
-    |-- results
-    |-- src
+    |-- paper
+    |-- output
+    |-- do
 
 Commit both the data and README files to your git repository.
 
@@ -195,7 +195,7 @@ SQL server, for example, or a shared hard drive with your lab? Now
 your data is living somewhere else, and you don't necessarily have
 direct control over its provenance (what if someone changes it while
 you weren't looking?). In this situation, you should try to make your
-`runall.py` script (see below) make a copy of the metadata associated
+`runall.do` script (see below) make a copy of the metadata associated
 with the dataset (it does have metadata, doesn't it?), which hopefully
 will include something like a version number and a last-updated date,
 and store this along with your results. That way you'll at least have
@@ -239,19 +239,19 @@ At this point, your project directory should look like this:
     |   |-- inflammation-01.csv
     |   |-- README.txt
     |-- man
-    |-- results
-    |-- src
+    |-- output
+    |-- do
     |   |-- 01-starting-with-data.Rmd
     |   |-- 02-func-R.Rmd
 
 Make sure that you commit these three new files (your module, test
 file, and test data set) to your git repository. You can commit these
 together, or separately if you think it would be useful to add a
-different commit message for the different files. 
+different commit message for the different files.
 
 Now, of course, that copying and pasting in a completed module is not
 the normal workflow for this step. Normally, you'd spend
-days/weeks/months working in the `src` directory, writing code and
+days/weeks/months working in the `do` directory, writing code and
 tests, generating intermediate results, looking at the results,
 writing new code and tests, generating new results, etc. This
 iterative cycle isn't unlike writing a paper --- you spew out a draft
@@ -269,7 +269,7 @@ very much a personal preference.
 
 Now that we have our core functions and tests in place, it's time to
 implement the "button" for our push-button workflow --- the
-`runall.R` script. We have not created this yet, so go ahead and
+`runall.R` or `runall.do` script. We have not created this yet, so go ahead and
 create a new .R script.
 
 As a reminder, the idea of the `runall` script is to collect all of
@@ -285,7 +285,7 @@ After creating this file, commit the `runall` script to your git repo.
 
 You can now imagine that you have finished a chatper of your thesis,
 and you are ready to submit it to Nature. But first, you would want to
-make sure all is well with your code and data. 
+make sure all is well with your code and data.
 
 You would first __delete all the files in your results directory.__
 (sound scary?) But with `runall` script you can run everything again
@@ -297,11 +297,11 @@ folder and re-run everything to make sure that everything is
 regenerating properly.
 
 At this point, a natural question to ask is whether you need to add
-the contents of your `results` directory to your git repository. The
+the contents of your `output` directory to your git repository. The
 answer should be obvious --- you do not need to do this, since the
-files in your `results` directory contain no unique information on
+files in your `output` directory contain no unique information on
 their own. Everything you need to create them is contained in the
-`data` and `src` directories. One exception to this, though, might be
+`data` and `do` directories. One exception to this, though, might be
 if your analysis takes a very long time to run and the outputs are
 fairly small in size, in which case you may want to periodically
 commit (so that you can easily recover) the results associated with
